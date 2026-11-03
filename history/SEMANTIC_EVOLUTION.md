@@ -22,6 +22,22 @@ Each entry names the previous semantics, the replacement, the triggering evidenc
 - **Affected:** `SCIRE_Conceptual_Proposal_v0.3.md` §2.2, §10 and SCIRE-10; `Memory_and_Domain_Interoperability_Proposal_v0.3.md` §3.3, §6.2 and INT-02.
 - **Disposition:** owner decision; the v0.3 texts that apply it are unratified proposals.
 
+## 2026-11-02 — The PI finalizes; SSDS builds on request (owner decision D-C)
+
+- **Previous:** v0.3 as first issued had SCIRE send investigation requests, model proposals and challenges to SSDS, with SSDS "deciding" them; it left open what ends scientific work that never reaches SSDS.
+- **Replacement:** SCIRE's end product is a scientific model finalized by the PI and backed by arguments. The PI decides what goes to SSDS to be built. A transfer hands over the model and never requests a build. SSDS executes only the implementation a user requests. SCIRE never executes.
+- **Trigger:** open question 1 of the first v0.3 interoperability text. Decided by the product owner in conversation.
+- **Affected:** `SCIRE_Conceptual_Proposal_v0.3.md` §0, §2.2, §4.2, §10.1, SCIRE-10; `Memory_and_Domain_Interoperability_Proposal_v0.3.md` §3.3, §6.2, §8.2–§8.4, INT-02.
+- **Disposition:** owner decision; applied by amending both v0.3 texts before any review bound them.
+
+## 2026-11-02 — Independent systems; links for traceability (owner decision D-D)
+
+- **Previous:** integrations were "optional connectors" whose operations were described as requests between systems.
+- **Replacement:** SCIRE, SSDS and their projects are independent, stand-alone systems with their own governing authorities. Cross-references are citation-like links; automated transfer of models and feedback is allowed. Both serve traceability and developmental data flow and are never operation requirements.
+- **Trigger:** owner clarification in conversation.
+- **Affected:** `SCIRE_Conceptual_Proposal_v0.3.md` §0, §2.5, §10, SCIRE-14; `Memory_and_Domain_Interoperability_Proposal_v0.3.md` §0, §4, §6.2, INT-04.
+- **Disposition:** owner decision; applied as above.
+
 ## 2026-11-02 — SCIRE v0.3 conceptual model (proposed)
 
 - **Previous:** argument as the primitive; a 19-type vocabulary; a separate Scientific Discrepancy Case type; bitemporal history; persisted L0/L1/L2 overviews; progressive formalization without triggers.

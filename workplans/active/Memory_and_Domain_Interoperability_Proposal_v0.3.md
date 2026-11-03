@@ -21,6 +21,10 @@
 
 - **D-A — Separation by responsibility.** "The distinction is not the number of user, or even private vs. public. It is separation of responsibility … the UPMS serves for general memory and logistics, while SCIRE stores scientific argument and discussion histories. One serves for an agent or team's general contextual record, the other is specific to scientific argument and discussions."
 - **D-B — SCIRE is the proposal layer.** "SCIRE is the proposal layer, SSDS owns the decided model and implementations. The output of SCIRE is the input to SSDS."
+- **D-C — The PI decides what SSDS builds.** "The PI (human) still have to decide in the end what goes into SSDS to build. SCIRE only gives the finalized scientific model backed by arguments, not execution. SSDS only executes the model implementation a user requested."
+- **D-D — Independent systems; links for traceability.** "SCIRE and SSDS and their projects serves as independent, stand-alone operable systems with their own governing authorities. They can refer each other's memory or documents through citation-like links and automated transfer of model and feedback, but those are for traceability and developmental data flows, not operation requirements."
+
+**Amendment.** Issued 2 November 2026 under D-A and D-B; amended the same day, before any review bound it, to apply D-C and D-D.
 
 **Title change.** v0.2 called UPMS "agent-centered". Under D-A, UPMS serves an agent *or a team*, so the title and file name drop that term. The lineage is kept by the input table above.
 
@@ -35,12 +39,12 @@ Three systems persist information over time, and all three can be called "memory
 | System | Responsibility |
 | --- | --- |
 | **UPMS** | The general contextual record and logistics of an agent or a team: what happened, commitments, schedules, unfinished work, and where the authoritative records live |
-| **SCIRE** | Scientific discussion and argument: questions, hypotheses, objections, evidence assessments, inquiry decisions and discovery history. It is the **proposal layer** |
-| **SSDS** | Decided scientific models and their implementations (D1–D4), governed execution, realized results and Project Engineering Memory (PEM) |
+| **SCIRE** | Scientific discussion and argument: questions, hypotheses, objections, evidence assessments, inquiry decisions and discovery history. It is the **proposal layer**; its end product is a scientific model finalized by the PI and backed by arguments. It never executes |
+| **SSDS** | The models it is asked to build, adopted under its own D1–D4 governance; their implementations; execution a user requests; realized results and Project Engineering Memory (PEM) |
 
-The main flow is **SCIRE → SSDS**: SCIRE's proposals are SSDS's inputs. SSDS's decisions and results come back to SCIRE as recorded decisions and evidence. UPMS remembers that this work exists and what is pending, and points to the owning records.
+The main flow is **SCIRE → SSDS**: the PI decides which finalized SCIRE models go to SSDS to be built, and SSDS implements and executes only what a user requests. SSDS's results and findings can flow back to SCIRE as evidence. UPMS remembers that this work exists and what is pending, and points to the owning records.
 
-Each system works without the others. They interact through a small number of named, domain-native operations, not through a shared kernel, schema or generic envelope. One problem — derived content crossing systems with confidentiality constraints — cannot be fully solved by any one system. That problem is stated, given a floor, and named as the only current reason that could justify shared machinery later.
+SCIRE, SSDS and their projects are **independent, stand-alone systems with their own governing authorities**. They cite each other's records through citation-like links and may transfer models and feedback automatically. Those links and transfers serve traceability and developmental data flow; none is required for any system to operate. There is no shared kernel, schema or generic envelope. One problem — derived content crossing systems with confidentiality constraints — cannot be fully solved by any one system. That problem is stated, given a floor, and named as the only current reason that could justify shared machinery later.
 
 ---
 
@@ -81,9 +85,10 @@ UPMS may tell an agent that a calculation was approved; recalling that does not 
 | What happened in an agent's or team's work; commitments; schedules; navigation cues | UPMS | Subject to verification against the owning domain for consequential use |
 | Scientific discussion records (messages, transcripts, attached artifacts of scientific meetings) | SCIRE | |
 | Questions, hypotheses, objections, evidence assessments, inquiry decisions, discovery history | SCIRE | Proposal layer |
-| Proposals to SSDS (investigation requests, model proposals, challenges) | SCIRE authors them; SSDS decides them | |
-| Decided scientific models and methods (D1, D2), architecture (D3), implementations (D4) | SSDS and its authority owners | |
-| Governed execution, realized results, qualification evidence | SSDS | |
+| Finalized scientific models backed by arguments | SCIRE; finalized by the PI | The end state of scientific work, whether or not it is built |
+| The decision to build a finalized model | The PI, as an SSDS user | Not an automatic consequence of transfer |
+| Models adopted for implementation (D1, D2), architecture (D3), implementations (D4) | SSDS and its authority owners | Adopted through SSDS's own governance |
+| Execution, realized results, qualification evidence | SSDS, on a user's request | |
 | Engineering lessons, failure families, applicability | SSDS PEM | Non-authoritative under PEM's own rules |
 | Laboratory data, literature, external datasets | Their own systems | Referenced, not owned, by SCIRE |
 | Access enforcement | The system that owns the resource | |
@@ -99,17 +104,25 @@ Separation by responsibility needs a rule for content that arrives in the "wrong
 - **Logistics in SCIRE.** Meeting times, task assignments and reminders that arise in a scientific meeting may be kept in SCIRE's discussion record as said. SCIRE does not manage them; an agent or team that wants them tracked records them in UPMS.
 - **Scientific status in summaries.** A UPMS overview may say "SCIRE question Q is open; three positions are live". It cannot say which position is right. For consequential use the consumer dereferences SCIRE, and for decided models, SSDS.
 
-### 3.3 Decided versus proposed
+### 3.3 Finalized, built and executed
 
-"Decided" in a scientific sense means accepted by an SSDS project's D1 or D2 owner. SCIRE records inquiry decisions (what to investigate, which hypothesis to work under for now, what to propose, what to submit for publication), which are attributed human decisions about the inquiry. A SCIRE inquiry decision never governs SSDS software, and no consumer may present it as a decided model.
+Three states are distinct, and each has one owner:
+
+- **Finalized** (SCIRE): the PI has decided that a scientific model is finished, with its arguments, evidence, validity regime, limitations and overruled objections. This is the end state of scientific work, including work that is published but never built.
+- **Adopted for implementation** (SSDS): the PI, as an SSDS user, has asked SSDS to build the model, and SSDS has adopted it into its D1–D4 authority through its own governance.
+- **Executed** (SSDS): SSDS has run an implementation that a user requested.
+
+SCIRE also records inquiry decisions (what to investigate, which hypothesis to work under for now). They are neither finalized models nor build requests. No consumer may present an inquiry decision as a finalized model, or a finalized model as adopted or executed.
 
 ---
 
 ## 4. Independent Operation
 
 - **UPMS without SCIRE or SSDS:** general contextual record and logistics for unrelated work.
-- **SCIRE without UPMS or SSDS:** full scientific discussion and inquiry from its own records. Investigations that need governed execution are recorded as proposed and not performed; evidence from other sources is accepted with its production class.
-- **SSDS without SCIRE or UPMS:** governed work under its own D1–D4 and PEM. Neither other system is a runtime dependency for independently authorized work.
+- **SCIRE without UPMS or SSDS:** full scientific discussion, inquiry and model finalization from its own records. Calculations that need governed execution are recorded as needed and not done; evidence from other sources is accepted with its production class.
+- **SSDS without SCIRE or UPMS:** governed work under its own D1–D4 and PEM. A model can enter SSDS without ever having been in SCIRE. Neither other system is a runtime dependency for independently authorized work.
+
+**Citation-like links.** A link from one system to another's record identifies that record and its revision, like a citation. It supports traceability. It does not create a dependency: an unresolvable link is shown as unresolved, never blocks operation, and never changes the citing record's status by itself. Each system and each project keeps its own governing authority; a link never extends one system's authority into another.
 
 **Failure isolation.** A failure or upgrade of one system degrades only the integrations that depend on it. An unavailable, unauthorized or unreachable system is reported as such. No response is never evidence that a record does not exist or that an obligation was fulfilled.
 
@@ -152,18 +165,16 @@ UPMS may keep overviews of an agent's or team's work. SCIRE keeps its compass. S
 
 ### 6.2 The first operations
 
-Only the operations needed by the first cross-system use (§8) are defined. Others are added when a concrete use case needs them.
+Only the operations needed by the first cross-system uses (§8) are defined. Others are added when a concrete use case needs them. **Every operation is optional**: each system operates fully without any of them (D-D).
 
 | Operation | Caller → owner | Carries | Returns | On failure |
 | --- | --- | --- | --- | --- |
-| **Resolve reference** | UPMS (or agent) → SCIRE / SSDS | Record identity, optional revision, intent (orientation, current state, history, source) | The record or view for that intent, its revision, retrieval time, coverage, visibility limits | Unavailable / unauthorized / not found *in scope*; never "does not exist" |
-| **Submit investigation request** | SCIRE → SSDS | Question, positions, assumptions, observables, discriminating outcome, proposed acceptance criteria, scope, approver | Request identity and receipt | Recorded in SCIRE as proposed, not sent |
-| **Submit model proposal or challenge** | SCIRE → SSDS | Proposed statement, assumption or regime (or the objection), evidence links, objection state, approver | Request identity; later, SSDS's decision by reference | As above |
-| **Publish result or decision** | SSDS → SCIRE | Reference to the SSDS decision or governed result, its revision and scope | SCIRE receipt | SSDS's record stays authoritative; SCIRE reconciles later |
-| **Persist scientific finding** (optional) | SSDS → SCIRE | An SSDP finding or tension about a project's science, with its SSDS binding and asserter | SCIRE question or objection identity | SSDS keeps the finding in its own home |
-| **Record context** | Agent → UPMS | A contextual note with references to SCIRE or SSDS records | UPMS record identity | No effect on SCIRE or SSDS |
+| **Resolve link** | Any system or agent → the cited system | Record identity, optional revision, intent (orientation, current state, history, source) | The record or view for that intent, its revision, retrieval time, coverage, visibility limits | Unavailable / unauthorized / not found *in scope*; never "does not exist". The citing record shows the link as unresolved |
+| **Transfer model package** | SCIRE → SSDS, manual or automatic, when the PI decides | The finalized model (statements, equations, assumptions, definitions, observables), validity regime, citation-like links to its arguments and evidence, limitations, overruled objections, the PI's finalization | Receipt | Stays in SCIRE as finalized, not transferred |
+| **Transfer feedback** | SSDS → SCIRE, manual or automatic | Citations to SSDS results, decisions on adopted models, and SSDP findings or tensions about the project's science, with revision, scope and asserter | SCIRE observation, question or objection identity | SSDS's records stay authoritative; SCIRE shows nothing new |
+| **Record context** | Agent → UPMS | A contextual note with links to SCIRE or SSDS records | UPMS record identity | No effect on SCIRE or SSDS |
 
-Whether SCIRE is a designated home for SSDP findings is an SSDS decision.
+A model-package transfer is not a build or run request. SSDS builds and executes only on a user's request, through its own interface and governance. Whether incoming SCIRE packages and outgoing feedback are automated is each system's own choice.
 
 ### 6.3 Retrieval intent and coverage
 
@@ -171,7 +182,7 @@ Orientation, historical recollection, current-state verification, justification,
 
 ### 6.4 Delivery
 
-Consequential operations have identifiable outcomes: received, validated, accepted or refused, completed or failed, result published. Retries must not duplicate a computation or authorization; request identities and idempotency rules are defined at the receiving boundary. No atomic transaction across systems is assumed. If SSDS publishes a result and SCIRE fails to record it, the SSDS result stays authoritative and SCIRE reconciles later. If UPMS fails to record an interaction, nothing in SCIRE or SSDS is undone.
+Transfers have identifiable outcomes: sent, received, recorded or refused. Retrying a transfer must not create duplicate records in the receiver; transfer identities and idempotency rules are defined at the receiving boundary. Build and execution requests are SSDS's own user operations and follow SSDS's rules. No atomic transaction across systems is assumed. If SSDS publishes a result and SCIRE fails to record it, the SSDS result stays authoritative and SCIRE reconciles later. If UPMS fails to record an interaction, nothing in SCIRE or SSDS is undone.
 
 ---
 
@@ -209,17 +220,17 @@ If ordinary research workflows routinely move restricted material across UPMS, S
 
 An agent recalls from UPMS that a SCIRE question is open and a calculation is pending. It resolves the reference in SCIRE, receives the question's live positions, open objections and pending proposals, and works from that record.
 
-### 8.2 From discussion to computation (the first cross-system use)
+### 8.2 From finalized model to implementation (the first cross-system use)
 
-Researchers identify a discriminating calculation in SCIRE. An authorized participant approves an investigation request under the project's rules. SCIRE submits it to SSDS. SSDS validates it against its accepted D1–D4 and execution rules, then runs, schedules or refuses it. SSDS publishes the result or refusal; SCIRE records it as an SSDS-governed observation or decision and assesses what it means for the positions. UPMS may remember that the investigation happened and that a follow-up discussion is due.
+A SCIRE question converges, and the PI finalizes a model ("harmonic approximation, valid below 300 K", with its arguments, evidence and the overruled objection about anharmonic samples). The PI decides it should be built. SCIRE transfers the model package. Nothing happens in SSDS until the PI, or another user, requests the implementation there. SSDS adopts the model through its own D1–D4 governance; it may narrow it ("below 250 K") or refuse, and it builds and runs only what was requested. SSDS's results and decisions flow back to SCIRE as feedback. SCIRE records them as SSDS-governed observations and decisions, and assesses what they mean for the question. UPMS may remember that the work happened and that a follow-up discussion is due.
 
-### 8.3 Proposing a model
+### 8.3 A discriminating calculation
 
-A SCIRE question converges on an assumption ("harmonic approximation valid below 300 K"). The team sends a model proposal to the SSDS project, with its evidence links and objection state. SSDS's D1 owner decides through its own process; it may accept, narrow ("below 250 K") or refuse. SCIRE records the decision by reference. Until then, the assumption governs only SCIRE's inquiry, and a request to run software outside SSDS's accepted regime is SSDS's to refuse.
+Researchers identify in SCIRE a calculation that would discriminate between two live positions. SCIRE records the need. A user who wants it requests it in SSDS (or carries it out elsewhere). The result comes back as feedback (or is entered with its production class) and SCIRE assesses it. SCIRE never runs the calculation and never submits it on its own.
 
 ### 8.4 An SSDS finding becomes a SCIRE question
 
-An SSDS run shows an anomaly that its D1 does not explain. SSDS persists the finding; where SSDS designates SCIRE as the home, it becomes a SCIRE question bound to the SSDS run and D1 claim. Discussion happens in SCIRE; any resulting model change returns to SSDS as a proposal.
+An SSDS run shows an anomaly that its D1 does not explain. SSDS keeps the finding in its own records; with feedback transfer enabled, it also becomes a SCIRE question citing the SSDS run and D1 claim. Discussion happens in SCIRE; if the PI finalizes a revised model, it goes back to SSDS as a new package, and SSDS rebuilds only on a user's request.
 
 ### 8.5 Learning from engineering failure
 
@@ -231,7 +242,7 @@ An agent recalls that project B studied a mechanism relevant to project A. If th
 
 ### 8.7 Stale or unavailable source
 
-An agent remembers an SSDS approval but cannot reach SSDS. It may report the recollection as history; it must not treat the approval as current. SCIRE, unable to reach SSDS, records the investigation as not performed and does not report a result.
+An agent remembers an SSDS approval but cannot reach SSDS. It may report the recollection as history; it must not treat the approval as current. SCIRE, unable to reach SSDS, shows its links to SSDS as unresolved, keeps the calculation need recorded as not done, and does not report a result.
 
 ### 8.8 A discrepancy and an unavailable SSDS
 
@@ -287,8 +298,8 @@ Extract a common component only when its semantics are stable across independent
 
 1. **Independent development.** Each system continues under its own process. SCIRE prioritizes its minimal record and the falsification experiments in its own proposal.
 2. **Interoperability discovery.** For each concrete cross-system use, record the owner, consumer, operation, data, authorization, failure behavior and intent (orientation, current state, history, source, proposal, finding), and which restricted sources could flow into a shared output.
-3. **First operations.** Implement only the §6.2 operations needed for §8.2, through MCP servers or equivalent. Test each system standalone first.
-4. **Adversarial contract tests.** Attempt to: launder restricted content through summaries; present remembered approval as current authorization; hide challenges through partial retrieval; present a SCIRE inquiry decision as an SSDS model; route a discrepancy into unauthorized SSDS execution.
+3. **First operations.** Implement only the §6.2 operations needed for §8.2 and §8.4, through MCP servers or equivalent. Test each system standalone first, and again with every link unresolvable.
+4. **Adversarial contract tests.** Attempt to: launder restricted content through summaries; present remembered approval as current authorization; hide challenges through partial retrieval; present a SCIRE inquiry decision as a finalized model, or a finalized model as adopted or executed; make a transfer trigger a build or run.
 5. **E3 — Derivative trace.** Trace multi-owner, partial-paraphrase, intermediate-summary, reviewer-verdict and revocation cases through the per-system floors and carried constraints. Count leaks, over-blocks and undecidable cases. The result decides whether alternative E is needed.
 6. **Shared utilities.** After real deployments, inspect duplication, recurring defects and maintenance cost; extract libraries only by §10.3.
 
@@ -298,11 +309,11 @@ Extract a common component only when its semantics are stable across independent
 
 **INT-01 — Separation by responsibility.** UPMS owns general contextual record and logistics; SCIRE owns scientific discussion and argument; SSDS owns decided models, implementations and governed execution.
 
-**INT-02 — Proposal flow.** SCIRE's outputs to SSDS are proposals; SSDS decides them through its own process; SCIRE records the decisions by reference.
+**INT-02 — Finalize, decide, build.** SCIRE's output is a PI-finalized model; the PI decides what goes to SSDS; a transfer never requests a build or run; SSDS adopts, builds and executes only on a user's request, under its own governance.
 
 **INT-03 — Single canonical owner.** References, summaries and caches never create a competing authority; storage location confers none.
 
-**INT-04 — Standalone operation.** Each system's core functions work without the other two.
+**INT-04 — Standalone operation.** Each system and project is independent, with its own governing authority, and its core functions work without the other two. Cross-system links are citation-like and transfers are optional; neither is an operation requirement.
 
 **INT-05 — Domain-native, named operations.** Integration uses the receiver's declared operations; no generic mutation interface and no shared schema.
 
@@ -331,7 +342,8 @@ Extract a common component only when its semantics are stable across independent
 | Risk | Failure | Response |
 | --- | --- | --- |
 | Content in the wrong system | Scientific status asserted from UPMS context | §3.2: UPMS assessments of scientific content have no standing; bring content into SCIRE |
-| Inquiry decision taken as model | Software runs under an undecided assumption | INT-02, §3.3 |
+| Inquiry decision taken as model, or transfer taken as build request | Software runs under an unfinalized or unrequested model | INT-02, §3.3 |
+| Links treated as dependencies | A system stalls or changes status when another is down | INT-04: links are citation-like |
 | Remembered state taken as current | Obsolete decisions acted on | INT-06, INT-10 |
 | Derivative leakage across systems | Restricted content in another system's shared output | INT-08; E3 decides on a shared release log |
 | Over-restriction | Collaboration blocked by blanket taint | Audience-scoped generation first |
@@ -344,9 +356,9 @@ Extract a common component only when its semantics are stable across independent
 
 ## 15. Open Questions
 
-1. **For the owner:** for scientific conclusions that never pass through SSDS (experimental or theoretical work without governed software), is an authors' publication decision recorded in SCIRE the end state, or should some other system own "decided" science there?
-2. **For the UPMS developer:** does UPMS's claim and judgment model need an explicit marker that its assessments of scientific content carry no standing (§3.2), and what triggers the hand-off of such content to SCIRE?
-3. **For the SSDS developer:** should SCIRE be a designated home for SSDP findings and tensions about a project's science (§6.2), and how does an SSDS model proposal enter D1 review?
+1. **For the UPMS developer:** does UPMS's claim and judgment model need an explicit marker that its assessments of scientific content carry no standing (§3.2), and what triggers the hand-off of such content to SCIRE?
+2. **For the SSDS developer:** how does a transferred model package enter D1 review when a user requests the build, and should SSDP findings and tensions about a project's science be transferred to SCIRE automatically (§6.2)?
+3. What minimum model-package content is usable by SSDS without either system depending on the other's internal formats?
 4. What reset empties a production context's release set, and who validates it?
 5. What is the minimum carried-constraint declaration (§7.3) that is useful without exposing private project details?
 6. How does revocation in one system reach references and summaries already held in another?
@@ -359,8 +371,10 @@ Extract a common component only when its semantics are stable across independent
 | v0.2 | v0.3 | Basis |
 | --- | --- | --- |
 | Title; §2.1, §3, INT-03: UPMS as agent-centered cognitive memory | Separation by responsibility; UPMS serves an agent or a team (§0, §3.1); boundary rule for misplaced content (§3.2) | SC-A, D-A |
-| §3 matrix; §7.2, §7.8: SCIRE and SSDS D1 presented as disjoint; SCIRE ratification | Proposal flow; "decided" means SSDS D1/D2; inquiry decisions only in SCIRE (§3.3, §6.2, §8.3) | SC-B, D-B |
-| — | SCIRE as optional home for SSDP findings (§6.2, §8.4) | SC-B |
+| §3 matrix; §7.2, §7.8: SCIRE and SSDS D1 presented as disjoint; SCIRE ratification | Finalized (SCIRE, by the PI), adopted for implementation (SSDS) and executed (SSDS) as distinct states (§3.3) | SC-B, D-B, D-C |
+| — | SSDP findings may flow to SCIRE as feedback (§6.2, §8.4) | SC-B, D-D |
+| §7.2: SCIRE submits investigation requests and model proposals to SSDS | PI-finalized model packages only; a transfer never requests a build; SSDS builds and executes only on a user's request (§3.3, §6.2, §8.2, §8.3) | D-C |
+| §4: optional connectors | Independent systems with own governance; citation-like links; every operation optional (§0, §4, §6.2, INT-04) | D-D |
 | §6.1, §6.4, §6.6: "conformal messaging", common envelope, semantic envelope candidate | Removed; six named operations (§6.2) | F-17 |
 | §11.4: duplication acceptable | Duplication acknowledged as large; shared library path (§1.3, §10.2) | Review §5 |
 | §6.7, §10.6: release checks without a floor | Per-system release-set lineage, audience-scoped generation, carried constraints, owner review (§7) | Review §3 |

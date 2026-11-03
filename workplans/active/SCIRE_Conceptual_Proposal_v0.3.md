@@ -20,6 +20,10 @@
 
 - **D-A — Separation by responsibility.** The owner's words: "The distinction is not the number of user, or even private vs. public. It is separation of responsibility … the UPMS serves for general memory and logistics, while SCIRE stores scientific argument and discussion histories." UPMS holds an agent's or team's general contextual record; SCIRE holds scientific argument and discussion.
 - **D-B — SCIRE is the proposal layer.** The owner's words: "SCIRE is the proposal layer, SSDS owns the decided model and implementations. The output of SCIRE is the input to SSDS."
+- **D-C — The PI decides what SSDS builds.** "The PI (human) still have to decide in the end what goes into SSDS to build. SCIRE only gives the finalized scientific model backed by arguments, not execution. SSDS only executes the model implementation a user requested."
+- **D-D — Independent systems; links for traceability.** "SCIRE and SSDS and their projects serves as independent, stand-alone operable systems with their own governing authorities. They can refer each other's memory or documents through citation-like links and automated transfer of model and feedback, but those are for traceability and developmental data flows, not operation requirements."
+
+**Amendment.** Issued 2 November 2026 under D-A and D-B; amended the same day, before any review bound it, to apply D-C and D-D.
 
 **Independence.** This revision was written by the same model family that wrote the review it answers, and that review shares ancestry with the UPMS candidates. Its acceptance therefore needs a reviewer from a different model family.
 
@@ -33,7 +37,9 @@ Research groups lose scientific understanding in predictable ways. A hypothetica
 
 SCIRE is a persistent environment in which human researchers and AI agents discuss science, and in which the **status** of every scientific statement, the **openness** of every objection, the **basis** of every claim and the **history** of every question stay explicit and attributable.
 
-SCIRE is the **proposal layer** of scientific work. It holds discussion, questions, competing hypotheses, objections, evidence assessments and the decisions a team takes about its inquiry. It does not hold decided scientific models or software: those belong to SSDS, which receives SCIRE's proposals as inputs and returns its governed results as evidence. General context and logistics (schedules, commitments, what happened in other work, where things are) belong to UPMS.
+SCIRE is the **proposal layer** of scientific work. It holds discussion, questions, competing hypotheses, objections, evidence assessments and the decisions a team takes about its inquiry. Its end product is a **finalized scientific model backed by arguments**, finalized by the project's PI. SCIRE never executes anything. The PI decides which finalized models go to SSDS to be built; SSDS implements and executes only what a user requests, under its own governance, and its results and findings can flow back to SCIRE as evidence. General context and logistics (schedules, commitments, what happened in other work, where things are) belong to UPMS.
+
+SCIRE, SSDS and their projects are independent systems with their own governing authorities. They cite each other's records through citation-like links and may transfer models and feedback automatically. Those links serve traceability and development; neither system needs the other to operate.
 
 The primary unit is the **open question**, not the argument. A question holds its live alternatives, the observations that bear on them, the objections raised, and the decisions taken. Arguments are optional structure inside a question, added when someone needs them.
 
@@ -72,17 +78,22 @@ A meeting holds people and agents with different expertise and assertiveness. Ag
 
 | System | Responsibility | Not its responsibility |
 | --- | --- | --- |
-| **SCIRE** | Scientific discussion and argument: discussion records, questions, hypotheses, objections, evidence assessments, inquiry decisions, discovery history; proposals sent to SSDS | Decided models, software, governed execution; general context and logistics |
-| **SSDS** | Decided scientific models (D1), numerical methods (D2), architecture (D3), implementations (D4), governed execution, realized results, PEM | Open scientific discussion; competing hypotheses before a model decision |
+| **SCIRE** | Scientific discussion and argument: discussion records, questions, hypotheses, objections, evidence assessments, inquiry decisions, discovery history; finalized scientific models backed by arguments | Execution of any kind; software; general context and logistics |
+| **SSDS** | The models it is asked to build, as accepted under its own D1–D4 governance; numerical methods, architecture and implementations; execution a user requests; realized results; PEM | Open scientific discussion; competing hypotheses; deciding what science to build |
 | **UPMS** | General contextual record and logistics for an agent or a team: what happened, commitments, schedules, where things are | Scientific argument and discussion history |
 
 The split is by **responsibility for the content**, not by the number of users and not by private versus shared. A team discussing a mechanism is doing SCIRE work, even if one of its members is an agent whose general memory is in UPMS. An agent remembering that the team meets on Tuesdays and that a SCIRE question is waiting for a calculation is doing UPMS work.
 
 ### 2.2 The proposal layer
 
-SCIRE's outputs to SSDS are **proposals**: an investigation request, a proposed model or assumption for SSDS's D1 owner to consider, or a challenge to an accepted SSDS model. SSDS decides through its own accepted process. SCIRE then records SSDS's decision and results by reference.
+SCIRE takes two kinds of decision, both attributed to people:
 
-SCIRE does take decisions, but only **inquiry decisions**: what to investigate next, which hypothesis to work under for now, what to propose to SSDS, which question to close as unproductive, and what the authors will put forward for publication. None of these is a decided scientific model. An inquiry decision to "work under the harmonic approximation below 300 K" governs what the team explores in SCIRE, not what any software assumes.
+- **Inquiry decisions:** what to investigate next, which hypothesis to work under for now, which question to close as unproductive. An inquiry decision to "work under the harmonic approximation below 300 K" governs what the team explores in SCIRE, not what any software assumes.
+- **Model finalization:** the PI's decision that a scientific model is finished. A **finalized model** states the model (equations, assumptions, definitions, observables), its validity regime, the arguments and evidence links backing it, its known limitations, and the objections that were overruled. It is the end state of scientific work in SCIRE, whether or not it is ever built. A publication decision is a decision about a finalized model or its parts.
+
+SCIRE's output to SSDS is a finalized model. **The PI decides which finalized models go to SSDS to be built.** Transferring a model, manually or automatically, gives SSDS the model and its backing; it does not ask SSDS to build or run anything. SSDS implements and executes only what a user requests, under its own D1–D4 governance. SSDS's results and findings may come back to SCIRE as evidence and new questions.
+
+A calculation that SCIRE identifies as discriminating is a need SCIRE records. Someone with the authority to do so then requests it in SSDS or carries it out elsewhere; either way, the result returns to SCIRE as an observation with its production class (§6.4).
 
 ### 2.3 Intended uses
 
@@ -92,7 +103,7 @@ SCIRE does take decisions, but only **inquiry decisions**: what to investigate n
 - Comparing competing explanations and choosing discriminating calculations or experiments.
 - Long-running projects across many discussions, and reconstruction of why things were believed.
 - Literature navigation, tutoring and derivation.
-- Preparing proposals to SSDS, reports and publication drafts.
+- Finalizing scientific models for building in SSDS, and preparing reports and publication drafts.
 
 ### 2.4 Non-goals
 
@@ -100,7 +111,9 @@ SCIRE does not replace human scientific judgment, decide truth by vote, treat ex
 
 ### 2.5 Standalone operation
 
-SCIRE must work without UPMS and without SSDS. Without SSDS, investigations that need governed execution are recorded as proposed and not performed; evidence from other sources is still accepted with its production class (§6.4). Without UPMS, a researcher opens SCIRE directly and resumes from its own records.
+SCIRE and its projects are independent, stand-alone systems with their own governing authorities. SCIRE must work without UPMS and without SSDS. Without SSDS, calculations that need governed execution are recorded as needed and not done; evidence from other sources is still accepted with its production class (§6.4). Without UPMS, a researcher opens SCIRE directly and resumes from its own records.
+
+Links to SSDS or UPMS records are **citation-like**: they identify a record and its revision for traceability. A link that cannot be followed is shown as unresolved; it never blocks SCIRE's operation and never changes a SCIRE record's status by itself.
 
 ---
 
@@ -150,7 +163,7 @@ Six kinds make up the scientific record. Everything else is a status, an optiona
 | **Statement** | A proposition with a modality: hypothesis, assertion, definition, assumption, prediction or explanation | Text (and equations), **modality**, conditions and regime, attribution, confirmation state, source links |
 | **Objection** | A challenge to a specific statement, inference step, evidence link or applicability condition | Target, ground, attribution, **disposition** |
 | **Evidence link** | How an observation bears on one or more statements | Observation reference, relation (§6.1), conditioning model and conditions, **use-role**, **production class**, assessor |
-| **Decision** | An attributed inquiry decision or a recorded external decision | Decider and authority basis, scope, effective interval, objections considered and overruled, dissent |
+| **Decision** | An attributed inquiry decision, a PI's model finalization, or a recorded external decision | Decider and authority basis, scope, effective interval, objections considered and overruled, dissent; for a finalization, the model statement set and its validity regime |
 | **Discovery link** | Why a later question or statement was pursued | From (question, observation, failed investigation), to, attribution |
 
 Investigations are questions' planned or completed actions. They are recorded as a decision to investigate plus the resulting evidence links, including null and inconclusive outcomes. Hypothesis portfolios are views of a question's live positions. "Discovery candidate" is a status on a statement. Revisions are versions of records, not separate objects.
@@ -159,7 +172,7 @@ Investigations are questions' planned or completed actions. They are recorded as
 
 Every statement carries a modality: hypothesized, asserted, assumed (for an inquiry), defined, predicted, quoted or reported (from literature or another party). Modality survives every copy, summary and export.
 
-A statement extracted by an AI from a discussion is attributed to that AI as an **interpretation** of the source span. It is attributed to a human only after that human confirms it. Only the speaker can confirm "this is what I meant". An AI is never the confirming party for a human's attribution. An unconfirmed interpretation is shown as the AI's, never as the speaker's, and never supports a decision or a proposal to SSDS.
+A statement extracted by an AI from a discussion is attributed to that AI as an **interpretation** of the source span. It is attributed to a human only after that human confirms it. Only the speaker can confirm "this is what I meant". An AI is never the confirming party for a human's attribution. An unconfirmed interpretation is shown as the AI's, never as the speaker's, and never supports a decision or a finalized model.
 
 The secretary distinguishes quotation, paraphrase, inferred missing premise, proposed formalization and independently substantiated statement.
 
@@ -169,7 +182,7 @@ Statement statuses: open, challenged, supported-under-conditions, disfavored-und
 
 Objection dispositions: open, acknowledged, answered (with the answer linked), withdrawn by the objector, overruled by a decision (the objection stays visible on that decision), deferred.
 
-**Objection rule.** A question cannot be closed, and a statement cannot become the basis of a decision or a proposal to SSDS, while an objection targeting it is open without a disposition. A decision may overrule an objection. The overruled objection and its author stay visible on the decision and on every view that shows the decision.
+**Objection rule.** A question cannot be closed, and a statement cannot become the basis of a decision or part of a finalized model, while an objection targeting it is open without a disposition. A decision may overrule an objection. The overruled objection and its author stay visible on the decision and on every view that shows the decision.
 
 ### 4.5 Optional argument structure
 
@@ -265,7 +278,7 @@ Every observation carries its production class:
 | SSDS-governed | A qualified SSDS run | Inherits SSDS qualification for its stated scope |
 | Project-recorded | A notebook calculation or lab measurement with recorded inputs | As recorded; no SSDS qualification |
 | External-reported | A literature value or collaborator's result | Subject to source verification and applicability |
-| Uninstrumented | A number pasted into a meeting | Usable for inquiry; labeled; cannot support a proposal to SSDS without upgrade |
+| Uninstrumented | A number pasted into a meeting | Usable for inquiry; labeled; cannot back a finalized model without upgrade |
 
 A numerically correct computation may solve an inadequate model, and a model may match data for compensating reasons. SCIRE keeps internal consistency, numerical correctness, model adequacy, empirical support and explanatory usefulness distinct.
 
@@ -318,7 +331,7 @@ The facilitator seeks coverage of material questions and minority positions rath
 
 ### 8.3 Decision authority
 
-Who may take which inquiry decisions, confirm statements for a group, and approve proposals to SSDS or publication is set per project. The minimum rules are fixed: only the speaker confirms their own meaning; a decision names its decider and authority basis; dissent stays on the decision. SCIRE records declared conflicts of interest; it does not score trust, reputation or intent.
+Who may take which inquiry decisions and confirm statements for a group is set per project. The minimum rules are fixed: the PI finalizes models and decides which go to SSDS; only the speaker confirms their own meaning; a decision names its decider and authority basis; dissent stays on the decision. An AI participant may propose a finalization, never make one. SCIRE records declared conflicts of interest; it does not score trust, reputation or intent.
 
 ### 8.4 Independent critique
 
@@ -338,7 +351,7 @@ By default a discussion is kept as an attributed record with an AI index. Scient
 
 1. someone raises an objection;
 2. someone takes a decision;
-3. content is sent out: to SSDS, to a wider audience, to publication;
+3. content is sent out: as a finalized model, to SSDS, to a wider audience, to publication;
 4. someone asks for a statement, question or argument to be recorded.
 
 The secretary may suggest records at any time; the suggestions stay suggestions until one of these triggers or a participant accepts them. A project that never triggers formalization pays nothing for it.
@@ -349,7 +362,7 @@ The secretary may suggest records at any time; the suggestions stay suggestions 
 
 ### 9.1 The compass
 
-The compass is a derived view built at read time from the scientific record by deterministic queries: open questions; live positions per question; open objections, ranked by declared consequence; recent decisions with their overruled objections; untested assumptions; stale evidence and pending review obligations; proposals waiting on SSDS. Its fields are exact as of the read. Where several incompatible positions are live, it shows all of them; there is no single "current explanation".
+The compass is a derived view built at read time from the scientific record by deterministic queries: open questions; live positions per question; open objections, ranked by declared consequence; recent decisions and finalized models with their overruled objections; untested assumptions; stale evidence and pending review obligations; recorded calculation needs; unresolved links. Its fields are exact as of the read. Where several incompatible positions are live, it shows all of them; there is no single "current explanation".
 
 A narrative synthesis may accompany it on request. The synthesis is labeled as synthesis, generated for the reader's audience (§9.2), and never cited. **Persisted or incrementally maintained narrative overviews are not part of the first product.** They are introduced only if experiment E2 (§15) shows that they save reader time without losing planted minority objections, invalidated assumptions, negative studies, stale evidence or restricted-source signals.
 
@@ -375,25 +388,19 @@ SCIRE enforces project-level visibility and separate read, contribute, review an
 
 ## 10. Interfaces with SSDS and UPMS
 
-### 10.1 SCIRE → SSDS: proposals
+All flows in this section are optional. They serve traceability and developmental data flow, not operation (D-D).
 
-SCIRE sends three kinds of proposal, each attributed and approved under the project's decision rules:
+### 10.1 SCIRE → SSDS: finalized models
 
-- **Investigation request:** question, live positions, relevant assumptions, expected observables, what outcome would discriminate, proposed acceptance criteria, scope.
-- **Model proposal:** a statement, assumption or regime proposed for adoption into an SSDS project's D1 (or, where relevant, D2) authority, with its evidence links and open-objection state.
-- **Challenge:** an objection to an accepted SSDS model, with its basis.
+When the PI decides that a finalized model should be built, SCIRE can transfer a **model package**: the model statements, validity regime, the arguments and evidence links backing them (as citation-like links), known limitations and overruled objections, and the PI's finalization decision. Transfer may be manual or automatic. It hands over the model; it does not request a build or a run. SSDS acts only on a user's request, and adopts the model into its D1–D4 authority through its own governance.
 
-SSDS decides each through its own accepted process. A SCIRE inquiry decision never governs SSDS software. Statements with open undisposed objections, unconfirmed interpretations and uninstrumented evidence cannot be the basis of a proposal (§4.3, §4.4, §6.4).
+A model package cannot include unconfirmed interpretations, statements with undisposed open objections, or uninstrumented evidence as backing (§4.3, §4.4, §6.4). A revised model is finalized again and transferred as a new package that cites the old one.
 
-### 10.2 SSDS → SCIRE: decisions and results
+### 10.2 SSDS → SCIRE: feedback
 
-SCIRE records SSDS's decision on each proposal by reference. SSDS results arrive as SSDS-governed observations (§6.4), referenced, not copied, and SCIRE assesses what they mean for the question's positions. Successful execution is not confirmation of a hypothesis. SCIRE never rewrites SSDS records.
+SSDS results, decisions and findings may come back to SCIRE, manually or automatically. Results arrive as SSDS-governed observations (§6.4), referenced, not copied; SCIRE assesses what they mean for the question's positions. Successful execution is not confirmation of a hypothesis. An SSDP finding or tension about a project's science may become a SCIRE question or objection, keeping its SSDS citation. SCIRE never rewrites SSDS records, and SSDS never rewrites SCIRE's.
 
-### 10.3 SSDS findings and tensions
-
-SSDP's scientific feedback loop sends material findings and tensions to an authorized writable home. SCIRE is a natural home for those about a project's science: a finding becomes a SCIRE question or objection, with its SSDS binding kept. Whether SCIRE is designated as that home is an SSDS decision.
-
-### 10.4 UPMS ↔ SCIRE
+### 10.3 UPMS ↔ SCIRE
 
 UPMS may hold that an agent or team took part in a SCIRE project, what follow-ups are pending, and references to SCIRE records. It does not hold SCIRE's discussion or argument. Before any consequential scientific use, a consumer dereferences SCIRE. SCIRE needs nothing from UPMS to operate.
 
@@ -412,7 +419,7 @@ These are logical responsibilities, not services.
 | Assessment support | Screening, comparability records, discriminating-investigation suggestions, literature navigation; outputs are proposals or flags |
 | Views | Compass, portfolios, timelines, search, audience-scoped synthesis; no authority |
 | Access and release | Permissions, release-set lineage, audience scoping, disclosure review |
-| External proposals | Proposal construction, sending, decision and result recording |
+| Model packages and links | Finalized-model packages, optional transfer, citation-like links and their resolution state, recording of returned feedback |
 
 The minimum useful prototype supports explicitly created records, the objection rule, modality and confirmation, the compass queries and audience-scoped synthesis. Semantic screening, argument structure and background agents are added only when the experiments in §15 justify them.
 
@@ -420,7 +427,7 @@ The minimum useful prototype supports explicitly created records, the objection 
 
 SCIRE does not itself produce realized scientific results; it retains and projects records that mediate scientific interpretation.
 
-- **Material realized record:** discussion records; statements with modality and confirmation; objections and dispositions; evidence links with use-role and production class; decisions with overruled objections; proposals and SSDS responses; deletions as tombstones; withheld outputs.
+- **Material realized record:** discussion records; statements with modality and confirmation; objections and dispositions; evidence links with use-role and production class; decisions and finalized models with overruled objections; transferred model packages and returned feedback; deletions as tombstones; withheld outputs.
 - **Intended readers:** project researchers, reviewers, and agents acting for them.
 - **Routine questions:** those in §7.2 and the compass fields in §9.1.
 - **Proposed product inspectability surfaces**, all beyond any currently accepted deliverable and binding only after the owner accepts them: the compass (§9.1), the reconstruction queries (§7.2), the source-owner manifest for disclosure review (§9.2).
@@ -433,7 +440,7 @@ SCIRE does not itself produce realized scientific results; it retains and projec
 
 **SCIRE-02 — Explicit status.** A statement's modality and status change only by an attributed act and survive every copy and export.
 
-**SCIRE-03 — Objection rule.** No closure, decision basis or proposal over an undisposed open objection; overruled objections stay visible.
+**SCIRE-03 — Objection rule.** No closure, decision basis or finalized model over an undisposed open objection; overruled objections stay visible.
 
 **SCIRE-04 — Faithful attribution.** AI interpretations are attributed to the AI until the speaker confirms them; only the speaker confirms their meaning.
 
@@ -447,7 +454,7 @@ SCIRE does not itself produce realized scientific results; it retains and projec
 
 **SCIRE-09 — Recoverable history.** "As known then" and "as now assessed about then" are both answerable; corrections are never back-dated.
 
-**SCIRE-10 — Proposal layer.** SCIRE decisions are inquiry decisions; decided models belong to SSDS; SCIRE's outputs to SSDS are proposals.
+**SCIRE-10 — Proposal layer.** SCIRE never executes. Its end product is a model finalized by the PI's attributed decision; the PI decides what goes to SSDS; a transfer never requests a build or run; SSDS builds only on a user's request, under its own governance.
 
 **SCIRE-11 — Release floors.** Release-set lineage, audience-scoped generation, and owner review across the project boundary; unknown lineage is withheld or reviewed, never released.
 
@@ -455,7 +462,7 @@ SCIRE does not itself produce realized scientific results; it retains and projec
 
 **SCIRE-13 — Demand-driven rigor.** Formal structure is created only on the triggers of §8.7.
 
-**SCIRE-14 — Standalone operation.** SCIRE's records and core operations do not depend on UPMS or SSDS.
+**SCIRE-14 — Standalone operation.** SCIRE's records and core operations do not depend on UPMS or SSDS. Cross-system links are citation-like; an unresolved link is shown as such and never blocks operation or changes a status by itself.
 
 ---
 
@@ -472,7 +479,7 @@ SCIRE does not itself produce realized scientific results; it retains and projec
 | Self-confirming flag loops | Machine-made closure or controversy | SCIRE-07 |
 | Derivative leakage | Confidential content in shared outputs | Release floors (SCIRE-11) |
 | Over-restriction | Collaboration blocked | Audience-scoped generation instead of taint-on-touch |
-| Inquiry decision mistaken for model authority | Unauthorized assumptions in software | SCIRE-10 |
+| Inquiry decision or transfer mistaken for a build request | Unauthorized assumptions in software | SCIRE-10: only a PI-finalized model is transferred, and only a user's request to SSDS builds it |
 | Bureaucracy | More effort formalizing than researching | SCIRE-13 |
 | Premature vocabulary | Rigidity across disciplines | Six kinds; meaning links as claims |
 
@@ -496,8 +503,8 @@ These are conceptual acceptance scenarios, not a test suite. Each names the expe
 | J | A user asks why hypothesis H was rejected, and what was believed before the last experiment | SCIRE answers "as known then" and "as now assessed about then" separately, with the records, decisions and dissent | 09 |
 | K | An agent drafts a public explanation from confidential evidence without quoting it | The draft inherits the release set; disclosure beyond the project needs the source owners' review; absent a release set, it is withheld | 11 |
 | L | A compass synthesis is requested by a member without access to a restricted dataset | The synthesis is generated only from sources that member may see; the view says that restricted material exists and is not shown | 11, 12 |
-| M | A team proposes an assumption for an SSDS model | SCIRE sends a model proposal with its evidence and objection state; SSDS decides; SCIRE records the decision by reference; the inquiry decision never governs software | 10 |
-| N | SSDS and UPMS are unreachable; a researcher pastes a locally computed number | Deliberation continues; the number is an uninstrumented observation; the SSDS investigation is recorded as not performed | 05, 14 |
+| M | A team converges on a model and the PI finalizes it for building | SCIRE records the finalization with its arguments, regime and overruled objections; the model package is transferred; nothing is built until a user requests it in SSDS; SSDS feedback returns as evidence | 03, 10 |
+| N | SSDS and UPMS are unreachable; a researcher pastes a locally computed number | Deliberation continues; the number is an uninstrumented observation; the calculation need stays recorded as not done; links to SSDS show as unresolved | 05, 14 |
 | O | A two-person project discusses informally for a month | No structure is created beyond the record and index unless an objection, decision, export or request occurs | 13 |
 
 ---
@@ -521,7 +528,7 @@ Each stage permits review and reconsideration of earlier stages.
 
 **Stage 4 — Optional structure.** Argument steps, screening, meaning-link suggestions — each only where Stage 1–3 use shows the need.
 
-**Stage 5 — Interfaces.** SSDS proposals and results; UPMS references; SSDP finding home if SSDS designates it.
+**Stage 5 — Links and transfer.** Citation-like links; model-package transfer to SSDS; SSDS feedback intake; UPMS references. All optional.
 
 ---
 
@@ -535,7 +542,7 @@ Each stage permits review and reconsideration of earlier stages.
 6. What compass fields do researchers actually use (to be learned from E1, E2 and Stage 1 use)?
 7. Which discussion content needs verbatim retention, and for how long, under each project's policy?
 8. What evidence should be required before SCIRE is trusted for consequential work (thresholds for E1–E4)?
-9. For conclusions that never go to SSDS (experimental or theoretical work without governed software), is an authors' publication decision in SCIRE the end state, or is another owner expected? See the owner question in the companion proposal.
+9. What minimum content makes a model package usable by SSDS without SCIRE having to know SSDS's internal D1 format?
 
 ---
 
@@ -563,7 +570,9 @@ Relevant as references, not dependencies: Toulmin's argument model (claims, grou
 | §10.3, §11.4: progressive formalization | Demand-driven triggers (§8.7) | F-15 |
 | §14.1: computation through SSDS | Production classes (§6.4) | F-18 |
 | §15, §8.4: retention open | Tombstones (§7.3); release floors (§9.2) | F-19, review §3 |
-| §3 P8, §9.5: SCIRE ratifies conclusions for governed use | Proposal layer; inquiry decisions only (§2.2, §10.1) | SC-B, D-B |
+| §3 P8, §9.5: SCIRE ratifies conclusions for governed use | Proposal layer; inquiry decisions and PI model finalization; the PI decides what SSDS builds; SSDS builds only on user request (§2.2, §10.1) | SC-B, D-B, D-C |
+| §14.1, §14.4: SCIRE sends investigation requests to SSDS | Calculation needs are recorded; a user requests them in SSDS; SCIRE transfers only finalized models (§2.2, §10.1) | D-C |
+| §2.4, §14.3: optional integration | Independent systems with own governance; citation-like links and optional automated transfer for traceability (§2.5, §10, SCIRE-14) | D-D |
 | §2.3, §13: SCIRE versus "general agent memory" | Separation by responsibility (§2.1) | SC-A, D-A |
 | SCIRE-01–23 | SCIRE-01–14 (§12) | F-16 |
 | Open questions 1–24 | 9 (§16); the rest are answered above or moved to experiments | F-16 |
