@@ -38,6 +38,14 @@ Each entry names the previous semantics, the replacement, the triggering evidenc
 - **Affected:** `SCIRE_Conceptual_Proposal_v0.3.md` §0, §2.5, §10, SCIRE-14; `Memory_and_Domain_Interoperability_Proposal_v0.3.md` §0, §4, §6.2, INT-04.
 - **Disposition:** owner decision; applied as above.
 
+## 2026-11-02 — Review framings D-E to D-J approved; v0.4 repairs (proposed)
+
+- **Previous:** v0.3 treated an unresolved link as never limiting anything; made the finalized model the end state of all scientific work; counted acknowledgement and deferral as objection dispositions; retained unknown-lineage content wherever the writer could write; confirmed only with held-out data; banned machine-to-machine assessment.
+- **Replacement:** the owner approved, as the framing for v0.4, the six recommendations answering the Codex review's open decisions: availability versus eligibility (D-E); outcomes other than finalized models (D-F); scoped multi-PI authority (D-G); scoped overrides that never resolve (D-H); retention, metadata and revocation owned by source owners (D-I); smallest first product with owner-set limits (D-J). v0.4 also proposes: handling versus resolution of objections; a basis statement before consequential use; use history with an inference-specific warrant; separate origin, qualification and usability; target-relative comparability; retention checked before storing, trusted carried constraints and protected metadata.
+- **Trigger:** `workplans/active/SCIRE_v0.3_Independent_Concept_Review.md` (Codex; NO-PASS, SC-31–SC-33, V3-01–V3-13). The owner answered "Yes, draft v0.4" to drafting with the recommended framings.
+- **Affected:** `SCIRE_Conceptual_Proposal_v0.4.md` and `Memory_and_Domain_Interoperability_Proposal_v0.4.md`, with change maps in their Appendix A.
+- **Disposition:** D-E to D-J are owner-approved framings; the v0.4 texts are unratified proposals pending independent re-review.
+
 ## 2026-11-02 — SCIRE v0.3 conceptual model (proposed)
 
 - **Previous:** argument as the primitive; a 19-type vocabulary; a separate Scientific Discrepancy Case type; bitemporal history; persisted L0/L1/L2 overviews; progressive formalization without triggers.
