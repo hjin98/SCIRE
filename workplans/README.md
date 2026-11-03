@@ -2,6 +2,8 @@
 
 This index lists the coordination records in `workplans/`. It routes to the documents and is not itself authority: each document states its own status. As of 2 November 2026 no SCIRE scientific semantics or architecture is accepted-current.
 
+**Direction (2 November 2026).** The owner decided that UPMS becomes one theory–evidence memory and SCIRE its front end for the discussion process, with SSDS kept outside (UPMS owner decisions D-20 to D-25). The governing proposal is `universal-persistent-memory-substrate/workplans/active/UPMS_Theory_Evidence_Memory_Proposal_v0.1.md`, which is unreviewed. The SCIRE v0.4 and interoperability v0.4 proposals below remain frozen as its inputs. The next SCIRE document is a front-end specification.
+
 ## Lifecycle
 
 - `active/` holds records whose obligations are still open, including superseded revisions that open review packages still cite.

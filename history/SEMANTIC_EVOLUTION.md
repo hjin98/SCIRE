@@ -53,3 +53,25 @@ Each entry names the previous semantics, the replacement, the triggering evidenc
 - **Trigger:** review findings F-03 to F-20. The owner delegated their disposition to the author's discretion.
 - **Affected:** `SCIRE_Conceptual_Proposal_v0.3.md` (whole); change map in its Appendix A.
 - **Disposition:** proposed, unratified; written by the same model family as the review, so it needs a different-family review.
+
+## 2026-11-02 — Memory moves to UPMS; SCIRE becomes its front end (UPMS owner decisions D-20 to D-25; proposed)
+
+- **Previous:**
+  - SCIRE was an independent system that held scientific discussion and argument itself.
+  - It was separated from UPMS by responsibility (D-A) and linked to UPMS and SSDS only by citation-like links (D-D).
+  - It kept its own read, retain and disclose floors.
+- **Replacement (proposed):**
+  - UPMS becomes one theory–evidence memory that stores both evidence and theory.
+  - SCIRE becomes the front end that owns the actual discussion process: meetings, facilitation, the secretary, inquiry policy (objection rule, basis statements, finalization, multi-PI authority, overrides) and the model hand-off to SSDS. UPMS is its memory engine.
+  - SSDS stays outside. D-B, D-C and D-E to D-J stand; D-E now applies only to SSDS links.
+  - SCIRE's confidentiality floors are replaced by UPMS's simplified scopes and an opt-in strict profile.
+  - Time-based retention gives way to recommended-retention flags.
+- **Trigger:** the owner's conversation of 2 November 2026, following the same-family re-review of v0.4.
+- **Affected:**
+  - The SCIRE v0.4 proposal and the interoperability v0.4 proposal become frozen inputs.
+  - The next SCIRE document is a front-end specification.
+  - The re-review findings are carried or dissolved as mapped in the UPMS proposal (§13.2).
+  - The governing text is `universal-persistent-memory-substrate/workplans/active/UPMS_Theory_Evidence_Memory_Proposal_v0.1.md`.
+- **Disposition:**
+  - The owner decisions partly reverse D-A (as to memory) and the UPMS–SCIRE half of D-D.
+  - The UPMS proposal applying them is unreviewed and unaccepted.
