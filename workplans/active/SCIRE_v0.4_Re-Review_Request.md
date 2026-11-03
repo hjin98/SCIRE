@@ -2,7 +2,7 @@
 
 **Subject:** SCIRE Conceptual Proposal v0.4 and the Interoperability Proposal v0.4
 **Review type:** Independent re-review of the contracts changed in response to the v0.3 review
-**Intended reviewer:** Codex (OpenAI family), the reviewer of v0.3, or another reviewer outside the Claude family
+**Intended reviewer:** Any capable reviewer, human or AI agent, of any model family. State your identity and model family in the review. Both v0.4 texts were written by a Claude model, so a reviewer from the Claude family must label its review **same-family**. Such a review can inform a revision but does not count as the independent review acceptance needs.
 **Status:** Reviewer instruction; not an accepted workplan, architecture, scientific gate or implementation mandate
 **Date:** 2 November 2026
 **Governing SSDP task version:** None specified.

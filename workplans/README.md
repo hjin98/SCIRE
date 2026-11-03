@@ -24,4 +24,4 @@ This index lists the coordination records in `workplans/`. It routes to the docu
 | `SCIRE_v0.3_Independent_Concept_Review.md` | Review record | Codex (OpenAI-family) review of both bound v0.3 proposals: NO-PASS / SERIOUS CHALLENGE; SC-31–SC-33 and findings V3-01–V3-13; supports the core direction but requires revisions; no ratification or implementation qualification |
 | `SCIRE_Conceptual_Proposal_v0.4.md` | Proposal, review candidate | Repairs SC-31–SC-33 and V3-01–V3-13 under owner decisions D-A to D-J, SHA-256 `18164233…9de002`; open for independent re-review |
 | `Memory_and_Domain_Interoperability_Proposal_v0.4.md` | Proposal, review candidate | Repairs the interoperability findings under D-A to D-J, SHA-256 `d901deb5…6d09e3`; open for independent re-review |
-| `SCIRE_v0.4_Re-Review_Request.md` | Review request | Requests an independent re-review of the changed v0.4 contracts, binding both by SHA-256 |
+| `SCIRE_v0.4_Re-Review_Request.md` | Review request | Requests a re-review of the changed v0.4 contracts by any reviewer, human or AI; Claude-family reviews are labeled same-family; binds both by SHA-256 |
