@@ -75,3 +75,18 @@ Each entry names the previous semantics, the replacement, the triggering evidenc
 - **Disposition:**
   - The owner decisions partly reverse D-A (as to memory) and the UPMS–SCIRE half of D-D.
   - The UPMS proposal applying them is unreviewed and unaccepted.
+
+## 2026-11-03 — Mathematics and tools extension (proposed)
+
+- **Previous:** SCIRE v0.4 covered discussion of empirical and theoretical claims, with no mathematical notation, derivation workflow or tools.
+- **Replacement (proposed, unreviewed):** SCIRE is extended, rather than joined by a second front end, to support:
+  - LaTeX in discussion;
+  - derivations as records;
+  - registered, sandboxed tools whose runs are recorded in UPMS as relative evidence;
+  - agent derivation and checking, with human inspection and end-to-end verification by designated verifiers;
+  - an inspection brief that ranks objective signals first and never omits a mandatory item.
+
+  Pure mathematics with Lean follows later.
+- **Trigger:** UPMS owner decisions D-57 to D-62 (3 November 2026).
+- **Affected:** `workplans/active/SCIRE_Mathematics_and_Tools_Extension_Proposal_v0.1.md`; `workplans/README.md`.
+- **Disposition:** proposal only. SCIRE v0.4 is unchanged.
