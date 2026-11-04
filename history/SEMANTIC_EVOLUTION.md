@@ -90,3 +90,11 @@ Each entry names the previous semantics, the replacement, the triggering evidenc
 - **Trigger:** UPMS owner decisions D-57 to D-62 (3 November 2026).
 - **Affected:** `workplans/active/SCIRE_Mathematics_and_Tools_Extension_Proposal_v0.1.md`; `workplans/README.md`.
 - **Disposition:** proposal only. SCIRE v0.4 is unchanged.
+
+## 2026-11-03 — Mathematics and tools extension v0.2 (proposed)
+
+- **Previous:** v0.1 let the derivation agent assess its own steps and judge its own renderings, cited UPMS D-52 for tool registration, called full verification a property of the result, and proposed a seeded-error study without a primary outcome, blinding or a frozen catalogue.
+- **Replacement (proposed, unreviewed):** agents never record inspections or clear their own work from the brief (UPMS D-73); a same-family checking agent is allowed and labeled (D-78); tools are registered by an operator act (D-77); artifacts are never executed by UPMS; "verified in full" is a property of the derivation, shown with premises and conditions; the brief lists carried conditions, discharges and self-assessed steps; deterministic tests are separated from a study registered before any data.
+- **Trigger:** a same-family review of the mathematics package by Claude Fable 5.1 (UPMS `UPMS_Mathematics_Package_Same_Family_Review.md`), and UPMS owner decisions D-71 to D-78.
+- **Affected:** `workplans/active/SCIRE_Mathematics_and_Tools_Extension_Proposal_v0.2.md`; `workplans/README.md`.
+- **Disposition:** proposal only. v0.1 is unchanged.
